@@ -16,7 +16,9 @@ class FoxSpider(scrapy.Spider):
             f.write(response.body)
 
         #for sel in response.xpath('//div[@class="views-field views-field-title"]/span[@class="field-content"]/a'):
-        for sel in response.xpath('//div[@class="field-content show-id"]'):
+        #for sel in response.xpath('//div[@class="field-content show-id"]'):
+        #for sel in response.xpath('//div[contains(@class,"views-field") and contains(@class,"views-field-title")]/span[@class="field-content"]/a'): #div[contains(@class,"views-field") and contains(@class,"views-field-title")]/
+        for sel in response.xpath('//a'):
             item = FoxShowItem()
            # item['showTitle'] = sel.xpath('a/a/text()').extract()
             item['showTitle'] = sel.xpath('text()').extract()
