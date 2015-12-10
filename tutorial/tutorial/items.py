@@ -34,3 +34,4 @@ class HboShowItem(scrapy.Item):
 
 class ShowItem(scrapy.Item):
     showTitle = scrapy.Field()
+    h2Title = scrapy.Field()
