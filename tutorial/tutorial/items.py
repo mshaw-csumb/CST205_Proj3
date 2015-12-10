@@ -21,3 +21,16 @@ class DmozItem(scrapy.Item):
     title = scrapy.Field()
     link = scrapy.Field()
     desc = scrapy.Field()
+
+class CbsShowItem(scrapy.Item):
+    showTitle = scrapy.Field()
+
+class HuluShowItem(scrapy.Item):
+    showTitle = scrapy.Field()
+
+class HboShowItem(scrapy.Item):
+    showTitle = scrapy.Field()
+
+
+class ShowItem(scrapy.Item):
+    showTitle = scrapy.Field()
