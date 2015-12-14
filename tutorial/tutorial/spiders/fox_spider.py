@@ -11,9 +11,9 @@ class FoxSpider(scrapy.Spider):
     ]
 
     def parse(self,response):
-        filename = response.url.split("/")[-2] + ".html"
-        with open(filename, 'wb') as f:
-            f.write(response.body)
+        #filename = response.url.split("/")[-2] + ".html"
+        #with open(filename, 'wb') as f:
+        #   f.write(response.body)
 
         #for sel in response.xpath('//div[@class="views-field views-field-title"]/span[@class="field-content"]/a'):
         #for sel in response.xpath('//div[@class="field-content show-id"]'):
